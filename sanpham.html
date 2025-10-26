@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sản phẩm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logobrand">
+        <a href="index.html">
+          <img src="e:/Baitap/image/Logo.png" alt="Logo LLH Computer" class="logo">
+          <span class="brand-name">LTT Computer</span>
+        </a>
+      </div>
+
+      <nav>
+        <ul class="top-nav">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="sanpham.html" target="_blank">Sản phẩm</a></li>
+          <li><a href="gioithieu.html" target="_blank">Giới thiệu</a></li>
+          <li><a href="lienhe.html" target="_blank">Liên hệ</a></li>
+        </ul>
+      </nav>
+
+      <div class="auth">
+        <button id="login">Đăng nhập</button>
+        <button id="register">Đăng ký</button>
+      </div>
+    </header>
+</div>
+
+
+<section class="product-page">
+  <!-- Cột bên trái: Bộ lọc -->
+  <aside class="filter-sidebar">
+    <h2>BỘ LỌC</h2>
+
+    <div class="filter-group">
+      <h3>Danh mục sản phẩm</h3>
+      <ul>
+        <li><a href="#">Laptop</a></li>
+        <li><a href="#" class="active">Linh kiện máy tính</a></li>
+        <li><a href="#">Màn hình</a></li>
+        <li><a href="#">Thiết bị ngoại vi</a></li>
+        <li><a href="#">Bàn ghế</a></li>
+      </ul>
+    </div>
+
+    <div class="filter-group">
+      <h3>Hãng sản xuất</h3>
+      <label><input type="checkbox"> CPU</label><br>
+      <label><input type="checkbox"> RAM</label><br>
+      <label><input type="checkbox"> PSU</label><br>
+      <label><input type="checkbox"> VGA</label><br>
+      <label><input type="checkbox"> CASE</label><br>
+      <label><input type="checkbox"> Ổ cứng</label><br>
+      <label><input type="checkbox"> Mainboardk</label><br>
+      <label><input type="checkbox"> Tản nhiệt</label>
+    </div>
+
+    <div class="filter-group">
+      <h3>Hãng sản xuất</h3>
+      <label><input type="checkbox"> Nvidia</label><br>
+      <label><input type="checkbox"> AMD</label><br>
+      <label><input type="checkbox"> MSI</label><br>
+      <label><input type="checkbox"> Kingston</label><br>
+      <label><input type="checkbox"> Gigabyte</label><br>
+      <label><input type="checkbox"> Asus</label><br>
+      <label><input type="checkbox"> Xigmatek</label><br>
+      <label><input type="checkbox"> Corsair</label><br>
+      <label><input type="checkbox"> Samsung</label><br>
+      <label><input type="checkbox"> Intel</label><br>
+    </div>
+
+    <div class="filter-group">
+  <h3>Khoảng giá</h3>
+  <div class="price-range">
+    <input type="range" min="0" max="100" value="25" class="range-input">
+    <div class="price-label">
+      <span>Từ: 0₫</span>
+      <span>Đến: 5.000.000₫</span>
+    </div>
+    <div class="price-inputs">
+    <input type="text" placeholder="Từ (₫)">
+      <input type="text" placeholder="Đến (₫)">
+      <button class="filter-btn">Lọc</button>
+    </div>
+  </div>
+</div>
+  </aside>
+
+  <!-- Danh sách sản phẩm -->
+  <div class="product-content">
+    <h2>LINH KIỆN MÁY TÍNH</h2>
+
+    <div class="sort-bar">
+      <button class="sort-btn active">Hàng mới</button>
+      <button class="sort-btn">Bán chạy</button>
+      <button class="sort-btn">Xem nhiều</button>
+      <button class="sort-btn">Giá tăng dần</button>
+      <button class="sort-btn">Giá giảm dần</button>
+    </div>
+
+    <div class="product-grid">
+      <!-- Mẫu sản phẩm -->
+      <div class="product-card">
+        <img src="image/i5_12400f.jpg" alt="i5_12400f">
+        <h4>CPU Intel Core i5 12400F</h4>
+        <p class="status">Còn hàng</p>
+        <p class="price">3.990.000 đ</p>
+      </div>
+
+      <div class="product-card">
+        <img src="image/MSIB760M.jpg" alt="MSIB760M">
+        <h4>Mainboard MSI B760M Gaming WIFI DDR5</h4>
+        <p class="status">Còn hàng</p>
+        <p class="price">2.990.000 đ</p>
+      </div>
+
+      <div class="product-card">
+        <img src="image/MSIPROB760M.jpg" alt="MSIPROB760M">
+        <h4>Mainboard MSI PRO B760M-A WIFI DDR4</h4>
+        <p class="status out">Hết hàng</p>
+        <p class="price">3.590.000 đ</p>
+      </div>
+
+      <div class="product-card">
+        <img src="image/ramfury16.jpg" alt="ramfury16">
+        <h4>RAM PC Kingston Fury Beast Black 16GB 3200MHz DDR4</h4>
+        <p class="status">Còn hàng</p>
+        <p class="price">1.490.000 đ</p>
+      </div>
+
+      <div class="product-card">
+        <img src="image/gigabyteP650SS.jpg" alt="gigabyteP650SS">
+        <h4>Nguồn máy tính Gigabyte P650SS 650W</h4>
+        <p class="status">Còn hàng</p>
+        <p class="price">1.290.000 đ</p>
+      </div>
+      
+      <div class="product-card">
+        <img src="image/ASUSdual3060.jpg" alt="ASUSdual3060">
+        <h4>VGA ASUS Dual Geforce RTX 3060</h4>
+        <p class="status">Còn hàng</p>
+        <p class="price">7.690.000 đ</p>
+      </div>
+
+      <div class="product-card">
+        <img src="image/GigabyteRX6500.jpg" alt="GigabyteRX6500">
+        <h4>VGA Gigabyte Radeon RX 6500</h4>
+        <p class="status">Còn hàng</p>
+        <p class="price">3.790.000 đ</p>
+      </div>
+
+      <div class="product-card">
+        <img src="image/XigmatekAK4.jpg" alt="XigmatekAK4">
+        <h4>Tản nhiệt khí Xigmatek AK4 Digital</h4>
+        <p class="status">Còn hàng</p>
+        <p class="price">690.000 đ</p>
+      </div>
+
+      <div class="product-card">
+        <img src="image/CorsairA115.jpg" alt="CorsairA115">
+        <h4>Tản nhiệt khí Corsair A115</h4>
+        <p class="status">Còn hàng</p>
+        <p class="price">2.790.000 đ</p>
+      </div>
+
+      <div class="product-card">
+        <img src="image/XigmatekMYX3F.jpg" alt="XigmatekMYX3F">
+        <h4>Case máy tính Xigmatek MYX 3F</h4>
+        <p class="status">Còn hàng</p>
+        <p class="price">:690.000 đ</p>
+      </div>
+
+      <div class="product-card">
+        <img src="image/XigmatekOceanMnano.jpg" alt="XigmatekOceanMnano">
+        <h4>Case Xigmatek Ocean M NANO Arctic M-ATX</h4>
+        <p class="status out">Hết hàng</p>
+        <p class="price">850.000 đ</p>
+      </div>
+
+      <div class="product-card">
+        <img src="image/KingstonNV3.jpg" alt="KingstonNV3">
+        <h4>SSD Kingston NV3 PCIe 4.0 NVMe 1TB</h4>
+        <p class="status">Còn hàng</p>
+        <p class="price">1.890.000 đ</p>
+      </div>
+
+      <div class="product-card">
+        <img src="image/Samsung990EVO.jpg" alt="Samsung990EVO">
+        <h4>SSD Samsung 990 EVO Plus PCIE GEN 4.0</h4>
+        <p class="status">Còn hàng</p>
+        <p class="price">2.290.000 đ</p>
+      </div>
+
+      <div class="product-card">
+        <img src="image/CorsairCX750.jpg" alt="CorsairCX750">
+        <h4>Nguồn Corsair CS 750</h4>
+        <p class="status">Còn hàng</p>
+        <p class="price">2.290.000 đ</p>
+      </div>
+    </div>
+
+    <div class="pagination">
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">Next</a>
+    </div>
+  </div>
+</section>
+
+
+    <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>THÔNG TIN LIÊN HỆ</h3>
+        <p><strong>Địa chỉ:</strong> 43 Đ. Trần Duy Hưng, Trung Hoà, Cầu Giấy, Hà Nội, Việt Nam</p>
+        <p><strong>Hotline:</strong> 1900 1234 56</p>
+        <p><strong>Email:</strong> Banphukienmaytinh@gmail.com</p>
+        <p><strong>Giờ làm việc:</strong></p>
+        <p>8:00 - 21:00 (Thứ 2 - Thứ 6)</p>
+        <p>8:00 - 19:00 (Thứ 7)</p>
+        <p>8:00 - 18:00 (Chủ nhật)</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>TÀI KHOẢN NGÂN HÀNG</h3>
+        <p><strong>MB BANK</strong></p>
+        <p>STK: 0094 595 8824</p>
+        <p>Chủ TK: CÔNG TY TNHH LTT COMPUTER</p>
+        <br/>
+        <p><strong>TECHCOMBANK</strong></p>
+        <p>STK: 1111 2222 3333</p>
+        <p>Chủ TK: CÔNG TY TNHH LTT COMPUTER</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>CHÍNH SÁCH & ĐIỀU KHOẢN</h3>
+        <ul>
+          <li><a href="#">Chính sách bảo hành</a></li>
+          <li><a href="#">Chính sách vận chuyển</a></li>
+          <li><a href="#">Chính sách đổi trả</a></li>
+          <li><a href="#">Quy định thanh toán</a></li>
+          <li><a href="#">Điều khoản dịch vụ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>THEO DÕI CHÚNG TÔI</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/" target="_blank"><img src="image/Facebook.png" alt="Facebook"></a>
+          <a href="https://www.youtube.com/" target="_blank"><img src="image/Youtube.png" alt="YouTube"></a>
+          <a href="https://www.instagram.com/" target="_blank"><img src="image/Instagram.png" alt="Instagram"></a>
+          <a href="https://www.tiktok.com/" target="_blank"><img src="image/Tiktok.png" alt="TikTok"></a>
+        </div>
+        <div class="payment-methods">
+          <h3>PHƯƠNG THỨC THANH TOÁN</h3>
+          <img src="image/Thanhtoan.png" alt="Phương thức thanh toán">
+        </div>
+      </div>
+    </div>
+  
+</footer>
+
+
+  </div>
+</body>
+</html>
