@@ -252,6 +252,23 @@ header nav .top-nav { margin: 0; }
 
 
 
+.sale-banner {
+    background: #ffcc00;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.sale-banner h2 {
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
 
 
 /* Deal cards (static layout giống ảnh mẫu) */
@@ -392,22 +409,48 @@ header nav .top-nav { margin: 0; }
 }
 
 .small-card {
-  flex: 0 0 200px;
+  flex: 0 0 220px;
   background:#fff;
   border-radius:8px;
-  padding:10px;
+  padding:12px;
   box-shadow:0 2px 6px rgba(0,0,0,0.04);
   display:flex;
   flex-direction:column;
-  gap:8px;
+  gap:10px;
   align-items:center;
   text-align:center;
 }
 
-.small-card img { width:100%; height:110px; object-fit:contain; background:#fafafa; border-radius:6px; }
-.small-card h4 { font-size:13px; color:#222; min-height:36px; margin:0; }
-.small-card .price { color:#d12b2b; font-weight:700; margin-top:4px; }
-.card-actions { margin-top:auto; width:100%; display:flex; justify-content:center; }
+.small-card img { 
+  width:100%;
+  height:200px;
+  object-fit:contain; 
+  background:#fafafa; 
+  border-radius:6px; 
+}
+
+
+.small-card h4 { 
+  font-size:13px; 
+  color:#222; 
+  min-height:36px; 
+  margin:0; 
+}
+.small-card .price { 
+  color:#d12b2b; 
+  font-weight:700; 
+  margin-top:4px; 
+}
+
+
+.card-actions { 
+  margin-top:auto; 
+  width:100%; 
+  display:flex; 
+  justify-content:center;
+}
+
+
 .mini-buy {
   display:inline-block;
   background:#1e88e5;
@@ -419,11 +462,590 @@ header nav .top-nav { margin: 0; }
 }
 
 /* scrollbar nhỏ */
-.category-row::-webkit-scrollbar{height:8px}
-.category-row::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.08);border-radius:6px}
+.category-row::-webkit-scrollbar{
+  height:8px
+}
+
+
+.category-row::-webkit-scrollbar-thumb{
+  background:rgba(0,0,0,0.08);
+  border-radius:6px
+}
 
 /* responsive */
 @media (max-width:900px){
-  .small-card { flex:0 0 160px; }
-  .small-card img{height:90px;}
+  .small-card { flex:0 0 180px; }
+  .small-card img{height:160px;}
+}
+
+
+
+.news-section {
+  margin: 40px 0;
+}
+
+.section-title {
+  font-size: 24px;
+  color: #2b387a;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 0 12px;
+}
+
+.news-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.news-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-card h3 {
+  font-size: 16px;
+  padding: 16px 16px 8px;
+  color: #222;
+  margin: 0;
+}
+
+.news-card p {
+  font-size: 14px;
+  color: #666;
+  padding: 0 16px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.news-link {
+  display: block;
+  text-align: right;
+  padding: 12px 16px;
+  color: #2b387a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.news-link:hover {
+  color: #ffcc00;
+}
+
+@media (max-width: 900px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* Thêm vào cuối file CSS */
+.site-footer {
+  background: #2b387a;
+  color: #fff;
+  padding: 40px 0;
+  margin-top: 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.footer-col h3 {
+  color: #ffcc00;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-col p {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+  color: #ffcc00;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.social-links img {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+.payment-methods img {
+  max-width: 200px;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-col {
+    text-align: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}
+
+
+
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.info-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.info-card img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.info-card h3 {
+  color: #2b387a;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.info-card p {
+  color: #666;
+  line-height: 1.5;
+  margin: 4px 0;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 40px 0;
+}
+
+.form-col h2,
+.map-col h2 {
+  color: #2b387a;
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-col form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-col input,
+.form-col select,
+.form-col textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-col textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.form-col button {
+  background: #2b387a;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.form-col button:hover {
+  background: #3a4a8c;
+}
+
+@media (max-width: 900px) {
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+  .form-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+.existing code
+
+/* Giờ làm việc + FAQ (hợp tông với site) */
+.hours-faq {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin: 40px 0;
+  align-items: start;
+}
+
+/* Work hours: gradient box */
+.work-hours {
+  background: linear-gradient(135deg, #3a66d8 0%, #2b387a 100%);
+  padding: 26px;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(43,56,122,0.12);
+}
+.work-hours h2 { text-align:center; color:#fff; font-size:22px; margin-bottom:18px; }
+.hours-cards { display:flex; gap:14px; flex-wrap:wrap; justify-content:center; }
+.hours-card {
+  background: rgba(255,255,255,0.08);
+  padding: 14px 18px;
+  border-radius: 10px;
+  min-width: 150px;
+  text-align:center;
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.02);
+}
+.hours-card h4 { font-size:14px; margin-bottom:6px; color:#fff; font-weight:700; }
+.hours-card p { font-size:13px; color:rgba(255,255,255,0.9); }
+
+/* FAQ column */
+.faq {
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 6px 18px rgba(17,24,39,0.06);
+}
+.faq h2 { text-align:center; color:var(--section-color, #2b387a); margin-bottom:18px; font-size:22px; }
+
+/* Accordion */
+.accordion .item { border-top: 1px solid #eef2fb; }
+.accordion .item:first-child { border-top: none; }
+.accordion .q {
+  width:100%;
+  background:transparent;
+  border:0;
+  padding:16px 12px;
+  text-align:left;
+  font-weight:700;
+  font-size:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+  color:#111;
+}
+.accordion .q .icon {
+  display:inline-block;
+  width:28px;
+  height:28px;
+  line-height:28px;
+  text-align:center;
+  border-radius:6px;
+  background:#f4f6fb;
+  color:#2b387a;
+  font-weight:700;
+}
+.accordion .a {
+  /* thay đổi: bỏ padding-bottom khi collapsed */
+  padding: 0 12px;
+  color:#555;
+  font-size:14px;
+  line-height:1.6;
+  max-height:0;
+  overflow:hidden;
+  transition: max-height 0.28s ease, padding-bottom 0.2s ease;
+}
+
+/* when open style tweak */
+.accordion .item.open .a {
+  padding-bottom:16px;
+}
+.accordion .item.open .q { color: #2b387a; }
+.accordion .item.open .icon { background:#2b387a; color:#fff; }
+
+/* Responsive */
+@media (max-width:1000px){
+  .hours-faq { grid-template-columns: 1fr; }
+  .hours-cards { justify-content: space-between; }
+}
+
+@media (max-width:600px){
+  .hours-card { min-width: 120px; padding:12px; }
+  .faq h2, .work-hours h2 { font-size:18px; }
+}
+
+
+.about-section {
+  margin: 28px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+/* banner ảnh lớn giống mẫu nhưng tông site */
+.about-banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display:block;
+  box-shadow: 0 6px 18px rgba(43,56,122,0.08);
+  object-fit: cover;
+}
+
+/* card chứa nội dung giới thiệu */
+.about-card {
+  background: #fff;
+  padding: 26px;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(17,24,39,0.06);
+  line-height: 1.7;
+  color: #222;
+}
+
+.about-card h1 {
+  color: #2b387a;
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 800;
+}
+
+/* đoạn văn rõ ràng dễ đọc */
+.about-card p {
+  color: #333;
+  font-size: 15px;
+  margin: 12px 0;
+}
+
+/* Responsive */
+@media (min-width:1000px) {
+  .about-section { grid-template-columns: 1fr; }
+}
+
+@media (max-width:600px) {
+  .about-card { padding: 18px; }
+  .about-card h1 { font-size: 18px; }
+  .about-card p { font-size: 14px; }
+}
+
+.features {
+  display: grid;
+  gap: 34px;
+  margin: 36px 0 60px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(17,24,39,0.06);
+}
+
+.feature-item .feature-media {
+  flex: 0 0 360px;
+  max-width: 360px;
+}
+
+.feature-item .feature-media img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  display:block;
+}
+
+.feature-item .feature-content {
+  flex: 1 1 auto;
+}
+
+.feature-item .feature-content h3 {
+  color: #2b387a;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.feature-item .feature-content ul {
+  margin-left: 18px;
+  color: #333;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* reverse để hoán đổi trái/phải */
+.feature-item.reverse { flex-direction: row-reverse; }
+.feature-item.reverse .feature-media { text-align: right; }
+
+/* nhỏ màn: stack dọc */
+@media (max-width: 900px) {
+  .feature-item {
+    flex-direction: column;
+    text-align: left;
+  }
+  .feature-item.reverse { flex-direction: column; }
+  .feature-item .feature-media { width:100%; max-width:100%; }
+  .feature-item .feature-media img { height: 200px; }
+}
+
+/* nhỏ hơn: làm ảnh nhỏ hơn */
+@media (max-width: 600px) {
+  .feature-item .feature-media img { height: 160px; border-radius:8px; }
+  .feature-item .feature-content h3 { font-size:18px; }
+  .feature-item .feature-content ul { font-size:14px; }
+}
+
+/* Thêm vào cuối file */
+.missions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.mission-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(17,24,39,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.mission-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+}
+
+.mission-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.mission-card h2 {
+  color: #2b387a;
+  font-size: 20px;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.mission-card .mission-desc {
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.mission-card ul {
+  text-align: left;
+  color: #333;
+  line-height: 1.6;
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+.mission-card ul li {
+  margin-bottom: 12px;
+}
+
+.mission-card ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .missions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .missions {
+    grid-template-columns: 1fr;
+  }
+  .mission-card {
+    padding: 24px;
+  }
+  .mission-card h2 {
+    font-size: 18px;
+  }
+  .mission-card ul {
+    font-size: 14px;
+  }
 }
