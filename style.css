@@ -606,6 +606,17 @@ header nav .top-nav { margin: 0; }
   line-height: 1.4;
 }
 
+.contact-link {
+  color: yellow; /* hoặc: color: #FFD700; */
+  text-decoration: none; /* giữ hoặc bỏ gạch chân tùy ý */
+  transition: color 0.15s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  color: red;
+}
+
 .footer-col ul {
   list-style: none;
   padding: 0;
@@ -753,6 +764,35 @@ header nav .top-nav { margin: 0; }
   background: #3a4a8c;
 }
 
+.form-col input:invalid,
+.form-col select:invalid {
+  border-color: #ff6b6b;
+}
+
+.form-col input:valid,
+.form-col select:valid {
+  border-color: #4CAF50;
+}
+
+.form-message {
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: none;
+}
+
+.form-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
 @media (max-width: 900px) {
   .contact-info {
     grid-template-columns: repeat(2, 1fr);
@@ -812,47 +852,63 @@ header nav .top-nav { margin: 0; }
 .faq h2 { text-align:center; color:var(--section-color, #2b387a); margin-bottom:18px; font-size:22px; }
 
 .accordion .item { border-top: 1px solid #eef2fb; }
-.accordion .item:first-child { border-top: none; }
-.accordion .q {
-  width:100%;
-  background:transparent;
-  border:0;
-  padding:16px 12px;
-  text-align:left;
-  font-weight:700;
-  font-size:15px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  cursor:pointer;
-  color:#111;
+.accordion details { border-top: 1px solid #eef2fb; }
+.accordion details:first-child { border-top: none; }
+
+/* summary như nút, ẩn marker mặc định */
+.accordion summary.q {
+  list-style: none;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 16px 12px;
+  background: transparent;
+  border: 0;
+  font-weight: 700;
+  font-size: 15px;
+  color: #111;
 }
-.accordion .q .icon {
-  display:inline-block;
-  width:28px;
-  height:28px;
-  line-height:28px;
-  text-align:center;
-  border-radius:6px;
-  background:#f4f6fb;
-  color:#2b387a;
-  font-weight:700;
+.accordion summary.q::-webkit-details-marker { display: none; }
+
+/* icon dùng pseudo-element -> + hoặc − */
+.accordion summary.q::after {
+  content: "+";
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 6px;
+  background: #f4f6fb;
+  color: #2b387a;
+  font-weight: 700;
 }
+
+/* nội dung ẩn/hiện với transition (max-height) */
 .accordion .a {
   padding: 0 12px;
-  color:#555;
-  font-size:14px;
-  line-height:1.6;
-  max-height:0;
-  overflow:hidden;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
   transition: max-height 0.28s ease, padding-bottom 0.2s ease;
 }
 
-.accordion .item.open .a {
-  padding-bottom:16px;
+.accordion details[open] .a {
+  padding-bottom: 16px;
+  /* đặt max-height lớn đủ chứa nội dung */
+  max-height: 400px;
 }
-.accordion .item.open .q { color: #2b387a; }
-.accordion .item.open .icon { background:#2b387a; color:#fff; }
+
+.accordion details[open] summary.q { color: #2b387a; }
+.accordion details[open] summary.q::after {
+  content: "−";
+  background: #2b387a;
+  color: #fff;
+}
 
 @media (max-width:1000px){
   .hours-faq { grid-template-columns: 1fr; }
@@ -1490,3 +1546,4 @@ header nav .top-nav { margin: 0; }
 .search-box button:hover {
   background: #1e2e70;
 }
+
